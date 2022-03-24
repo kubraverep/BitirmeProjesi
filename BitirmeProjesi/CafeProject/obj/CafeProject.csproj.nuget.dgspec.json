@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj": {}
+    "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj": {
+    "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
+        "projectUniqueName": "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
         "projectName": "CafeProject",
-        "projectPath": "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
-        "packagesPath": "C:\\Users\\Büşra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\obj\\",
+        "projectPath": "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
+        "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Büşra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
