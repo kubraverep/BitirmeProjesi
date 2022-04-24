@@ -7496,19 +7496,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\win10\\.nuget\\packages\\": {}
+    "C:\\Users\\Büşra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
+      "projectUniqueName": "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
       "projectName": "CafeProject",
-      "projectPath": "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
-      "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\win10\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\obj\\",
+      "projectPath": "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\CafeProject.csproj",
+      "packagesPath": "C:\\Users\\Büşra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Büşra\\Desktop\\BitirmeProjesi\\BitirmeProjesi\\BitirmeProjesi\\CafeProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Büşra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
