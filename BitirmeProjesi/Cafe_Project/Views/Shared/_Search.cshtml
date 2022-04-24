@@ -1,0 +1,8 @@
+﻿@*arama yapmak için bir partialView oluşturduk fakat bu herhangi bir controllera bağlı değil*@
+@*arama butonu aktif olduğunda kullanıcı karşısına çıkacak olan sayfa search olacak, controller ismi home,form beginformun classını kullanacak*@ 
+@using(Html.BeginForm("Search","Home", FormMethod.Get,new { @class= "navbar-search pull-left" }))
+{
+    //q ile arama butonuna gelen ifade ilişkilendirilir; yani arama kutusuna girilen ifade search actionundan gelen q ifadesidir.
+    <input type="text" name="q" placeholder="Arama" class="search-query span2">
+    <button type="submit">Ara</button>@*arama butonunu aktif hale getirmek için bir partialView kullanacağız*@
+}

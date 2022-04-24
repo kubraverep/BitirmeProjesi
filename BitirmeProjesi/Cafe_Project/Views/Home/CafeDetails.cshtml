@@ -1,0 +1,66 @@
+﻿@using Cafe_Project.Entity
+@model Cafe
+<div class="row">
+    <div id="sidebar" class="span3">
+        <div class="well well-small">
+            <ul class="nav nav-list" style="width:400px">
+                @Html.Action("_CategoryList", "Category")
+
+
+            </ul>
+        </div>
+
+        
+        @Html.Action("_FeaturedCafeList", "Home")
+
+    </div>
+    <div class="span9">
+        <ul class="breadcrumb">
+            <li><a href="/Home/Index">Anasayfa</a> <span class="divider">/</span></li>
+            <li><a href="/Home/Cafe">Cafeler</a> <span class="divider">/</span></li>
+            <li class="active">Cafe Detay</li>
+        </ul>
+        <div class="well well-small">
+            <div class="row-fluid">
+                <div class="span5">
+                    <div id="myCarousel" class="carousel slide cntr">
+                        
+                            <div class="item">
+                                <a href="#"> <img src="~/Content/images/@Model.Image" alt="" style="width:100%"></a> @*hangi ürüne tıkladıysa o ürünün resmi gelsin*@
+                            </div>
+                            
+                        
+                        @*<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> slider için Sağ ol yön okları gelmesin *@
+                   
+                    </div>
+                </div>
+                <div class="span7">
+                    <h3>@Model.Cafe_Name</h3>
+                    <hr class="soft" style="margin:0px;"/>
+
+                    <form class="form-horizontal qtyFrm">
+                        <div class="control-group">
+                            <label class="control-label" style="width: 400px "><span>@Model.Cafe_Description</span></label>
+                           
+                        </div>
+
+                        
+                       
+                        <h4>Bilgi</h4>
+                        <p>
+                            @Model.Cafe_Information
+                        <p>
+                            
+                            <button type="submit" class="shopBtn"><span class="icon-comment"></span>&nbsp; İletişim Kur</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="softn clr" />
+
+
+            
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿@using Cafe_Project.Entity
+@model IEnumerable<Cafe>
+    <h3>Popüler Cafeler</h3>
+<ul class="nav nav-list promowrapper">
+    @foreach (var item in Model)
+    {
+        <li>
+            <div class="thumbnail">
+                
+                <img src="~/Content/images/@item.Image"style="max-width:207px;max-height:206px; min-width:160px;min-height:160px;" alt="bootstrap ecommerce templates">
+                <div class="caption">
+                    <h4 style="font-size: 20px; text-align: center"><span  >@item.Cafe_Name</span></h4>
+                    <h4 style="font-size:15px;text-align:center"> <a class="defaultBtn" href="/Home/CafeDetails/@item.Cafe_ID">Görüntüle</a></h4>
+                </div>
+            </div>
+        </li>
+        <li style="border:0"> &nbsp;</li>
+    }
+
+
+</ul>

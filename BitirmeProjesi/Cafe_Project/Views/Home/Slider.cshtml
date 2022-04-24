@@ -1,0 +1,33 @@
+﻿@using Cafe_Project.Entity
+@model IEnumerable<Cafe>
+
+<div id="myCarousel" class="carousel slide homCar">
+    <div class="carousel-inner">
+
+        <div class="item active">
+            @*sayfa ilk açıldığında gelecek olan resim*@
+        <img style="width:100%" src="/Site/assets/img/carousel1.png" alt="bootstrap ecommerce templates">
+        <div class="carousel-caption">
+            <h4>Bootstrap Ecommerce template</h4>
+            <p><span>Highly Google seo friendly</span></p>
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            @*slider içinde bir resme tıklandığında o cafenin detay sayfası gelsin*@
+            <a href="/Home/CafeDetails/@item.Cafe_ID">
+                <img style="width: 100% ;max-width:698px; max-height: 327px; min-width: 698px; min-height: 327px;"  src="~/Content/images/@item.Image" alt="bootstrap templates">
+            </a>
+            <div class="carousel-caption">
+                <h4>@item.Cafe_Name</h4>
+                <p><span>@item.Cafe_Description</span></p>
+            </div>
+        </div>
+    }
+
+
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Cafe_Project.Entity.Cafe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Cafe Listesi</h3>
+                </div><!-- /.box-header -->
+                <br />
+                <a class="btn btn-primary btn-block" href="@Url.Action("Create")">Yeni Kayıt</a>
+                <br />
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Resim</th>
+                                <th>Adı</th>
+                                <th>Cafe Tanım</th>
+                                <th>Kategori Adı</th>
+                                <th>Anasayfa</th>
+                                <th>Popüler</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)//tekrar edecek olan kısım
+                            {
+                            <tr>
+                                <td><img src="~/Content/images/@item.Image" width="80" height="60" /></td>
+                                <td>@item.Cafe_Name</td>
+                                <td style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60ch;">@item.Cafe_Description</td>
+                                <td>@item.Category.Name</td>
+                                <td>
+                                    @if (item.IsHome)
+                                    {
+                                        <label class="label label-success"><i class="fa fa-fw fa-check-circle-o"></i>Evet</label>
+                                    }
+                                    else
+                                    {
+                                        <label class="label label-danger"><i class="fa fa-fw fa-times-circle"></i>Hayır</label>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.IsFeatured)
+                                    {
+                                        <label class="label label-success"><i class="fa fa-fw fa-check-circle-o"></i>Evet</label>
+                                    }
+                                    else
+                                    {
+                                        <label class="label label-danger"><i class="fa fa-fw fa-times-circle"></i>Hayır</label>
+                                    }
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary" href="@Url.Action("Edit",new { id = item.Category_ID})"><i class="fa fa-fw fa-edit"></i>Düzenle</a>
+                                    <a class="btn btn-danger" href="@Url.Action("Delete",new { id = item.Category_ID})"><i class="fa fa-fw fa-trash-o"></i>Sil</a>
+                                </td>
+                            </tr>
+                            }
+
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Resim</th>
+                                <th>Adı</th>
+                                <th>Cafe Tanım</th>
+                                <th>Kategori Adı</th>
+                                <th>Anasayfa</th>
+                                <th>Popüler</th>
+                                <th>Edit</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</section>

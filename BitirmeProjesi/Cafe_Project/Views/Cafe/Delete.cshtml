@@ -1,0 +1,94 @@
+﻿@model Cafe_Project.Entity.Cafe
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="content">
+
+  
+
+    <h3>Cafeyi silmek istediğinizden emin misiniz?</h3>
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                Adı
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cafe_Name)
+            </dd>
+
+            <dt>
+                Bilgi
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cafe_Information)
+            </dd>
+
+            <dt>
+                Açıklama
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cafe_Description)
+            </dd>
+
+            <dt>
+                Menü
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cafe_Menu)
+            </dd>
+
+            <dt>
+                Resim
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+                <img src="~/Content/images/@Model.Image" width="50" height="40" />
+            </dd>
+
+            <dt>
+                Slayt
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Slider)
+            </dd>
+
+            <dt>
+                Anasayfa
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsHome)
+            </dd>
+
+            <dt>
+                Popüler
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsFeatured)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Sil" class="btn btn-danger" />
+                @Html.ActionLink("Kafe Listesi", "Index", null, new { @class = "btn btn-warning" })
+            </div>
+        }
+    </div>
+    </section>

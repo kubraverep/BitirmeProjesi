@@ -1,0 +1,52 @@
+﻿@using Cafe_Project.Entity
+@model IEnumerable<Cafe>
+@{
+    ViewBag.Title = "CafeList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div id="sidebar" class="span3">
+        <div class="well well-small">
+            <ul class="nav nav-list" style="width:400px">
+                @Html.Action("_CategoryList", "Category")
+            </ul>
+        </div>
+
+        @Html.Action("_FeaturedCafeList", "Home")
+
+    </div>
+    <div class="span9">
+        <!--
+        New Products
+        -->
+
+        <h3>CAFELER </h3>
+
+        <ul class="thumbnails">
+            @foreach (var item in Model)
+            {
+                <li class="span3">
+                    <div class="thumbnail">
+
+                        <a href="/Home/CafeDetails/@item.Cafe_ID"><img src="~/Content/images/@item.Image" style="max-width:207px;max-height:206px; min-width:207px;min-height:206px;" alt=""></a>
+                        <div class="caption cntr">
+                            <p><strong> @item.Cafe_Name</strong></p>
+                            <p style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 50ch;">@item.Cafe_Description</p>
+                            <h4><a class="shopBtn" href="/Home/CafeDetails/@item.Cafe_ID" title="add to cart">Görüntüle</a></h4>
+
+                            <br class="clr">
+                        </div>
+                    </div>
+                </li>
+                @*Tekrar edecek kısmı for içinde döndürdük*@
+            }
+
+
+        </ul>
+
+
+
+    </div>
+</div>
+

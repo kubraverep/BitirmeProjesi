@@ -1,0 +1,9 @@
+﻿@using Cafe_Project.Models
+@model IEnumerable<CategoryModel>
+<li><a href="/Home/Cafes"><span class="icon-chevron-right"></span>TÜM CAFELER</a></li>
+
+@*kategorileri listeleyen döngü*@
+@foreach (var item in Model)
+{
+    <li><a href="/Home/CafeList/@item.Id"><span class="icon-chevron-right"></span>@item.Category_Name [ @item.Count ]</a></li>
+}
